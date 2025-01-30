@@ -7,6 +7,7 @@ function list(clients) {
   `).join('');
 }
 
+// needed to use copilot for this function
 function order(clients, property) {
   return [...clients].sort((a, b) => {
     if (typeof a[property] === 'string') {
@@ -18,6 +19,7 @@ function order(clients, property) {
 
 function total(clients) {
   return clients.reduce((sum, client) => sum + client.balance, 0);
+  // I think this is correct implementation of funx
 }
 
 function info(index) {
@@ -28,4 +30,5 @@ function search(query) {
   return clients.filter(client => 
     client.name.toLowerCase().includes(query.toLowerCase())
   );
+  // I understood this one
 }
